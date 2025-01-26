@@ -1,0 +1,285 @@
+{% extends 'base.html' %}
+{% block title  %}
+  Home
+{% endblock title  %}
+{% block content %}
+<body>
+  <header class="bg-primary text-white text-center py-3" style="font-family: Forte, cursive;">
+    <h1>
+        <i class="fas fa-book"></i> Book Worm
+    </h1>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="myshelf.html">My Shelf</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contribution.html">Contribution</a></li>
+                        <!--li class="nav-item"><a class="nav-link" href="login.html">Login</a></li-->
+                        <li class="nav-item"><a class="nav-link" href="pageturner.html">Page Turner</a></li>
+                        <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="navbar bg-light p-3 d-flex align-items-center justify-content-between">
+        <div class="left-section d-flex align-items-center">
+            <select class="form-select me-2" style="width: auto;">
+                <option value="all">All</option>
+                <option value="books">Books</option>
+                <option value="magazines">Magazines</option>
+            </select>
+            <input type="text" class="form-control me-2" placeholder="Search" style="width: 300px;">
+            <button class="btn btn-outline-primary">🔍</button>
+        </div>
+        <div class="right-section d-flex align-items-center">
+            <select id="language" class="form-select me-3" style="width: auto;">
+                <option value="english">English</option>
+                <option value="hindi">Hindi</option>
+                <option value="bengali">Bengali</option>
+            </select>
+            <div id="datetime" class="me-3"></div>
+            <img src="https://via.placeholder.com/40" alt="Profile Picture" class="rounded-circle">
+        </div>
+    </div>
+
+    <main class="container mt-4">
+      <section id="welcome" class="text-center mb-5">
+          <h2>Welcome to Book Worm</h2>
+          <p>Your digital library for reading and exploring books of all genres.</p>
+      </section>
+
+      <section id="categories" class="mb-5">
+          <h2>Categories</h2>
+          <div class="row">
+              <div class="col-md-3"><button class="btn btn-outline-primary w-100">Folktales</button></div>
+              <div class="col-md-3"><button class="btn btn-outline-primary w-100">Fiction</button></div>
+              <div class="col-md-3"><button class="btn btn-outline-primary w-100">Non-Fiction</button></div>
+              <div class="col-md-3"><button class="btn btn-outline-primary w-100">Funny</button></div>
+              <div class="col-md-3 mt-3"><button class="btn btn-outline-primary w-100">Family and Friendship</button></div>
+              <div class="col-md-3 mt-3"><button class="btn btn-outline-primary w-100">Love</button></div>
+              <div class="col-md-3 mt-3"><button class="btn btn-outline-primary w-100">Science</button></div>
+          </div>
+      </section>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button class="btn btn-primary" type="button">Show All</button>
+      </div>
+      <section id="favorites" class="mb-5">
+          <h2>Your Favorite Books</h2>
+          <p>Bookmark your favorite books here.</p>
+          <ul id="favorite-list" class="list-group"></ul>
+      </section>
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+          <div class="col">
+            <div class="card">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Journey to yours Dreams</h5>
+                <p class="card-text">A Compilation of Inspiring Flash Fiction 
+                                     Short Stories, Quotes and Poetry.
+                                    By - FRANCIS NINO DIGAMO</p>
+                <a href="bookpreview.html">
+                  <button type="button" class="btn btn-outline-primary">READ NOW</button>
+                    </a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">The Secret Of Success</h5>
+                <p class="card-text">The measure that we express and unfold the powers of 
+                                    that "I", so are we great, strong and successful.
+                                     By - WILLIAM WALKER ATKINSON</p>
+                                     <a href="bookpreview.html">
+                                      <button type="button" class="btn btn-outline-primary">READ NOW</button>
+                                        </a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">BHAGAVAD GITA</h5>
+                <p class="card-text"> "Best Bhagavad Gita 
+                                       Quotes By Lord Krishna 
+                                       On Success & Life" 
+                                       By - SWAMI PRABHUPADA </p>
+                                       <a href="bookpreview.html">
+                                        <button type="button" class="btn btn-outline-primary">READ NOW</button>
+                                          </a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">THINK AND GROW RICH</h5>
+                <p class="card-text">Whatever the mind can conceive and believe, the mind can achieve.
+                                      The starting point of all achievement is desire.
+                                    By - NAPOLEON HILL</p>
+                                    <a href="bookpreview.html">
+                                      <button type="button" class="btn btn-outline-primary">READ NOW</button>
+                                        </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <button class="btn btn-primary" type="button">Show All</button>
+        </div>
+      <section id="Recomended Books For You" class="mb-5">
+          <h2>Recomended Books For You</h2>
+          <p>Bookmark favorite books here.</p>
+          <ul id="Recomended Books For You" class="list-group"></ul>
+      </section>
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+          <div class="col">
+            <div class="card">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Journey to yours Dreams</h5>
+                <p class="card-text">A Compilation of Inspiring Flash Fiction 
+                                     Short Stories, Quotes and Poetry.
+                                     By - FRANCIS NINO DIGAMO</p>
+                                     <a href="bookpreview.html">
+                                      <button type="button" class="btn btn-outline-primary">READ NOW</button>
+                                        </a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">The Secret Of Success</h5>
+                <p class="card-text">The measure that we express and unfold the powers of 
+                                     that "I", so are we great, strong and successful.
+                                     By - WILLIAM WALKER ATKINSON</p></p>
+                                     <a href="bookpreview.html">
+                                      <button type="button" class="btn btn-outline-primary">READ NOW</button>
+                                        </a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">BHAGAVAD GITA</h5>
+                <p class="card-text">"Best Bhagavad Gita 
+                                      Quotes By Lord Krishna 
+                                      On Success & Life" 
+                                      By - SWAMI PRABHUPADA</p>
+                                      <a href="bookpreview.html">
+                                        <button type="button" class="btn btn-outline-primary">READ NOW</button>
+                                          </a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">THINK AND GROW RICH</h5>
+                <p class="card-text">Whatever the mind can conceive and believe, the mind can achieve.
+                                     The starting point of all achievement is desire.
+                                     By - NAPOLEON HILL</p>
+                                     <a href="bookpreview.html">
+                                      <button type="button" class="btn btn-outline-primary">READ NOW</button>
+                                        </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <button class="btn btn-primary" type="button">Show All</button>
+        </div>
+        </main>
+        <section id="New Arrival" class="mb-5">
+          <h2>New Arrival</h2>
+          <ul id="New Arrival" class="list-group"></ul>
+      </section>
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+          <div class="col">
+            <div class="card">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Rich dad Poor dad</h5>
+                <p class="card-text">ROBORT T.KIYOSAKI</p>
+                <a href="bookpreview.html">
+                  <button type="button" class="btn btn-outline-primary">READ NOW</button>
+                    </a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Alice in wonder land </h5>
+                <p class="card-text">LEWIS CARROLL</p>
+                <a href="bookpreview.html">
+                  <button type="button" class="btn btn-outline-primary">READ NOW</button>
+                    </a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Harry Potter</h5>
+                <p class="card-text">J.K. ROWLING</p>
+                <a href="bookpreview.html">
+                  <button type="button" class="btn btn-outline-primary">READ NOW</button>
+                    </a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">The Guide</h5>
+                <p class="card-text">R.K. NARAYAN</p>
+                <a href="bookpreview.html">
+                  <button type="button" class="btn btn-outline-primary">READ NOW</button>
+                    </a>
+              </div>
+            </div>
+          </div>
+          </div>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 Book Worm. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+            const formattedDate = now.toLocaleDateString();
+            const formattedTime = now.toLocaleTimeString();
+            document.getElementById('datetime').textContent = `${formattedDate} ${formattedTime}`;
+        }
+
+        // Update date and time every second
+        setInterval(updateDateTime, 1000);
+
+        // Initialize immediately
+        updateDateTime();
+    </script>
+    <!-- Include Font Awesome -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
+{% endblock content %}

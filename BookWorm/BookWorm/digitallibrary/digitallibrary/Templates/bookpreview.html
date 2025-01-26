@@ -1,0 +1,312 @@
+{% extends 'base.html' %}
+{% block title  %}
+  Book Preview
+{% endblock title  %}
+{% block content %}
+<body>
+    
+    <header class="bg-primary text-white text-center py-3" style="font-family: Forte, cursive;">
+        <h1>
+            <i class="fas fa-book"></i> Book Worm
+        </h1>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="myshelf.html">My Shelf</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contribution.html">Contribution</a></li>
+                        <!--li class="nav-item"><a class="nav-link" href="login.html">Login</a></li-->
+                        <li class="nav-item"><a class="nav-link" href="pageturner.html">Page Turner</a></li>
+                        <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+     <!-- Add the navigation bar code here -->
+     <div class="navbar">
+        <div class="left-section">
+            <select>
+                <option value="all">All</option>
+                <option value="books">Books</option>
+                <option value="magazines">Magazines</option>
+            </select>
+            <input type="text" placeholder="Search">
+            <button>🔍</button>
+        </div>
+        <div class="right-section d-flex align-items-center">
+            <select id="language" class="me-3">
+                <option value="english">English</option>
+                <option value="hindi">Hindi</option>
+                <option value="bengali">Bengali</option>
+            </select>
+            <div id="datetime" class="me-3"></div>
+            <img src="https://via.placeholder.com/40" alt="Profile Picture" class="rounded-circle">
+        </div>
+    </div>
+
+    <main class="container mt-4">
+        <section id="welcome" class="text-center mb-5">
+            <h2>Welcome to Book Worm</h2>
+            <p>Your digital library for reading and exploring books of all genres.</p>
+        </section>
+         <button type="button" class="btn btn-primary"
+        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+  Back to result
+</button>
+<div class="container">
+    <div class="row g-4">
+      <!-- Left Card -->
+      <div class="col-md-6">
+        <div class="card mb-3" style="max-width: 100%;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="https://via.placeholder.com/150" class="img-fluid rounded-start" alt="Left Card Image">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Rich Dad Poor Dad</h5>
+                <p class="card-text">
+                  This is a wider card with supporting text below as a natural lead-in to additional content. 
+                  This content is a little bit longer.
+                </p>
+                <!--p class="card-text"><small class="text-body-secondary">Last updated 5 mins ago</small></p-->
+                <a href="readnow.html" class="card-link">Read Now</a>
+                <a href="#" class="card-link">Add to list</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Right Card -->
+      <div class="col-md-6">
+        <div class="card mb-3" style="max-width: 100%;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="https://via.placeholder.com/150" class="img-fluid rounded-start" alt="Right Card Image">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Robert T Kiyosaki</h5>
+                <p class="card-text">
+                  This is another wider card with supporting text below as a natural lead-in to additional content. 
+                  This content is also a little bit longer.
+                </p>
+                <!--p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p-->
+                <a href="#" class="card-link">Other Books</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Overview with Buttons</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+      /* Flex container for buttons */
+      .button-container {
+          display: flex;
+          align-items: center;
+          justify-content: space-between; /* Spread buttons from left to right */
+          gap: 15px; /* Space between buttons */
+          margin-bottom: 20px;
+      }
+
+      /* Button styling */
+      .btn-blue {
+          background-color: #007BFF; /* Blue color */
+          color: white;
+          border: none;
+          border-radius: 5px;
+          padding: 10px 15px;
+          cursor: pointer;
+      }
+
+      /* Hover effect for buttons */
+      .btn-blue:hover {
+          background-color: #0056b3; /* Darker blue on hover */
+      }
+
+      /* Hidden section styling */
+      .hidden-section {
+          display: none; /* Hide sections by default */
+      }
+
+      /* Responsive buttons spacing */
+      .button-container button {
+          flex: 1;
+          text-align: center;
+      }
+
+      /* Styling for image cards */
+      .image-container {
+          display: flex;
+          gap: 15px;
+      }
+
+      .image-container img {
+          max-width: 100%;
+          height: auto;
+          border-radius: 5px;
+      }
+  </style>
+</head>
+<body>
+  <div class="container my-5">
+      <!-- Buttons in one row -->
+      <div class="button-container">
+          <button id="overview-button" class="btn-blue">Overview</button>
+          <button id="details-button" class="btn-blue">Details</button>
+          <button id="reviews-button" class="btn-blue">Reviews</button>
+          <button id="related-button" class="btn-blue">Related Books</button>
+      </div>
+
+      <!-- Sections -->
+      <div id="overview-section" class="hidden-section">
+          <div class="row row-cols-1 row-cols-md-2 g-3">
+              <div class="col">
+                  <div class="card">
+                      <div class="card-body">
+                          <b>Publish</b> - 20/07/2005
+                      </div>
+                  </div>
+              </div>
+              <div class="col">
+                  <div class="card">
+                      <div class="card-body">
+                          <b>Publisher</b> - Ruskin Bond
+                      </div>
+                  </div>
+              </div>
+              <div class="col">
+                  <div class="card">
+                      <div class="card-body">
+                          <b>Language</b> - English
+                      </div>
+                  </div>
+              </div>
+              <div class="col">
+                  <div class="card">
+                      <div class="card-body">
+                        <b>Pages</b> - 216
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div id="details-section" class="hidden-section">
+          <div class="row row-cols-1 row-cols-md-2 g-3">
+              <div class="col">
+                  <div class="card">
+                      <div class="card-body">
+                          Written by a renowned author.
+                      </div>
+                  </div>
+              </div>
+              <div class="col">
+                  <div class="card">
+                      <div class="card-body">
+                          Published in 2025, it has gained worldwide acclaim.
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div id="reviews-section" class="hidden-section">
+          <div class="row row-cols-1 row-cols-md-2 g-3">
+              <div class="col">
+                  <div class="card">
+                      <div class="card-body">
+                          "Absolutely fantastic! A must-read." - Reader A
+                      </div>
+                  </div>
+              </div>
+              <div class="col">
+                  <div class="card">
+                      <div class="card-body">
+                          "Couldn't put it down! Highly recommended." - Reader B
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div id="related-section" class="hidden-section">
+          <div class="image-container">
+              <img src="https://via.placeholder.com/150" alt="Related Book 1">
+              <img src="https://via.placeholder.com/150" alt="Related Book 2">
+          </div>
+      </div>
+  </div>
+
+  <script>
+      // JavaScript to toggle sections visibility
+      const overviewButton = document.getElementById('overview-button');
+      const detailsButton = document.getElementById('details-button');
+      const reviewsButton = document.getElementById('reviews-button');
+      const relatedButton = document.getElementById('related-button');
+
+      const overviewSection = document.getElementById('overview-section');
+      const detailsSection = document.getElementById('details-section');
+      const reviewsSection = document.getElementById('reviews-section');
+      const relatedSection = document.getElementById('related-section');
+
+      // Utility function to hide all sections
+      function hideAllSections() {
+          overviewSection.style.display = 'none';
+          detailsSection.style.display = 'none';
+          reviewsSection.style.display = 'none';
+          relatedSection.style.display = 'none';
+      }
+
+      overviewButton.addEventListener('click', () => {
+          hideAllSections();
+          overviewSection.style.display = 'block'; // Show Overview section
+      });
+
+      detailsButton.addEventListener('click', () => {
+          hideAllSections();
+          detailsSection.style.display = 'block'; // Show Details section
+      });
+
+      reviewsButton.addEventListener('click', () => {
+          hideAllSections();
+          reviewsSection.style.display = 'block'; // Show Reviews section
+      });
+
+      relatedButton.addEventListener('click', () => {
+          hideAllSections();
+          relatedSection.style.display = 'flex'; // Show Related Books section
+      });
+  </script>
+  <script>
+    function updateDateTime() {
+        const now = new Date();
+        const formattedDate = now.toLocaleDateString();
+        const formattedTime = now.toLocaleTimeString();
+        document.getElementById('datetime').textContent = `${formattedDate} ${formattedTime}`;
+    }
+
+    // Update date and time every second
+    setInterval(updateDateTime, 1000);
+
+    // Initialize immediately
+    updateDateTime();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+{% endblock content %}
